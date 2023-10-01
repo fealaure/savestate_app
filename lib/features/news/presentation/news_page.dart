@@ -20,8 +20,8 @@ class NewsPage extends GetView<NewsController> {
                 itemBuilder: (context, index) {
                   final post = controller.posts[index];
                   return ListTile(
-                    title: Text(post.title.rendered),
-                    subtitle: Text(post.excerpt.rendered),
+                    title: Text(post.title),
+                    subtitle: Text(post.excerpt),
                     onTap: () => Get.to(() => {}),
                   );
                 },
