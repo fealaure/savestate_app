@@ -7,7 +7,7 @@ class NewsBinding extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut<PostRepository>(
-      () => PostRepositoryImpl(client: Get.find()),
+      () => PostRepositoryImpl(dio: Get.find()),
     );
     Get.lazyPut(
       () => NewsController(repository: Get.find()),
