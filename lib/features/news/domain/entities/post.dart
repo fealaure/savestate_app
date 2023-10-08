@@ -1,3 +1,5 @@
+import 'package:save_state/core/extensions/string_extensions.dart';
+
 class Post {
   final int id;
   final String date;
@@ -22,8 +24,8 @@ class Post {
         date: json["date"],
         link: json["link"],
         mediaUrl: json["jetpack_featured_media_url"],
-        title: json['title']['rendered'] as String,
-        content: json['content']['rendered'] as String,
-        excerpt: json['excerpt']['rendered'] as String,
+        title: (json['title']['rendered'] as String).cleanFromHtml(),
+        content: (json['content']['rendered'] as String).cleanFromHtml(),
+        excerpt: (json['excerpt']['rendered'] as String).cleanFromHtml(),
       );
 }
