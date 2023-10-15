@@ -42,9 +42,9 @@ class NewsItemWidget extends StatelessWidget {
             child: Align(
               alignment: Alignment.center,
               child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.5, // Define a largura como 50% da largura da tela
+                width: MediaQuery.of(context).size.width * 0.5,
                 child: Column(
-                  mainAxisSize: MainAxisSize.min, // Ajusta a coluna ao tamanho do conteúdo
+                  mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
